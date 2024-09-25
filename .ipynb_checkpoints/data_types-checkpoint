@@ -1,0 +1,247 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "d099a1f6-ba8e-4a15-8dd5-406b053261df",
+   "metadata": {},
+   "source": [
+    "# Data Types\n",
+    "anytime you want to open a notebook, you first open gitbash and you run \"jupyter notebook\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "f23ee8f9-d628-4e03-8853-b267ef991bc8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#to run a cell, you can press shift-enter on windows \n",
+    "\n",
+    "#assignment is\n",
+    "x = 5 # integer\n",
+    "y = 6.7 #float/floating point decimal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "a858f427-1256-4d2b-9340-f4aa51660bda",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (x)\n",
+    "# to get hints on a function, put your cursor in the function and press shift-tab"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "6a3aadbb-e28b-4866-9c0f-071d341eab44",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "float"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "46ca7e04-c1c5-4b0c-8dd4-e1d6437c0a9d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# dictionaries are key value pairs \n",
+    "breakfast = {\"pancakes\": 10,\n",
+    "             \"bacon\":30,\n",
+    "             \"eggs\":150}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "b026aa72-c620-400b-b83b-2b30a43ee7e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "bool"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#booleans are true or false values\n",
+    "is_true = False\n",
+    "type(is_true)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "bc8a3a24-f6b3-4c28-a8e5-d802ed4a2b54",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#sets have unordered values and unchangeable values (immutable)\n",
+    "breakfast_set = {\"eggs\", \"bacon\", \"pancakes\"}\n",
+    "                 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "7d441199-5e5b-4e3a-9cb8-0401a06e7579",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#list values can be changed and they are ordered \n",
+    "#we count starting at 0, So, january is item 0, but there are still 3 times in this list\n",
+    "months = [\"January\", \"February\",\"March\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "35c9abd8-2a89-49dc-9eb2-0a8af289f126",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'coffee'"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# tuples are ordered but unchangeable (immutable)\n",
+    "breakfast_tuple = (\"coffee\", \"bagels\", \"cereal\")\n",
+    "breakfast_tuple[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "3d55a36d-4b40-44fd-95a6-46efb528f032",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('b', 'c')\n"
+     ]
+    }
+   ],
+   "source": [
+    "#slicing uses the function slice. slice(start, end, step)\n",
+    "letters_tuple = (\"a\", \"b\", \"c\", \"d\", \"e\")\n",
+    "x = slice(1, 3)\n",
+    "print(letters_tuple[x])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "07925a31-d2bf-401f-8ac5-dae85dc100ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "('b', 'c')"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "letters_tuple[1:3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "23b0c6fd-5cf7-4ea8-807c-662ad09bf718",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "tuple indices must be integers or slices, not float",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[22], line 3\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;66;03m# use slice to return a, c, and e \u001b[39;00m\n\u001b[0;32m      2\u001b[0m \u001b[38;5;66;03m# the end value is \"exclusive\" which means 8-5 does not include 5 itself, \u001b[39;00m\n\u001b[1;32m----> 3\u001b[0m \u001b[38;5;28mprint\u001b[39m (\u001b[43mletters_tuple\u001b[49m\u001b[43m[\u001b[49m\u001b[43my\u001b[49m\u001b[43m]\u001b[49m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: tuple indices must be integers or slices, not float"
+     ]
+    }
+   ],
+   "source": [
+    "# use slice to return a, c, and e \n",
+    "# the end value is \"exclusive\" which means 8-5 does not include 5 itself, \n",
+    "print (letters_tuple[y])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "22300d0c-1d50-488d-8951-8666b23df17e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
